@@ -1,0 +1,31 @@
+.btn-8 {
+	display: inline-block;
+	color: #777b80;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	padding: 12px 20px;
+	font-size: 14px;
+	border-radius: 0.25rem;
+	border: solid 1px;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+}
+
+.btn-8-colors {
+	color: #fff;
+	background-color: #444749;
+	border-color: #212529;
+}
+
+.btn-8:focus-visible {
+	outline: 3px solid #64bec8;
+	outline-offset: 2px;
+}
+
+.btn-8:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}

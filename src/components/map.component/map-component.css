@@ -1,0 +1,5 @@
+.shared-map {
+	width: 100%;
+	height: var(--map-height, 420px);
+	min-height: 280px;
+}
