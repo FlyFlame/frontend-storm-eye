@@ -24,7 +24,7 @@ export class MapComponent {
 
 		this.markers = new Set();
 		this.map = L.map(this.container, { minZoom, maxZoom }).setView(center, zoom);
-		L.tileLayer(tileUrl, { attribution, maxZoom }).addTo(this.map);
+		this.baseLayer = L.tileLayer(tileUrl, { attribution, maxZoom }).addTo(this.map);
 		this.polygon = null;
 		this.draftLayer = null;
 		this.polygonPoints = [];

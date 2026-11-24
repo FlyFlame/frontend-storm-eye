@@ -1,5 +1,6 @@
 import './analysis-page.css';
 import { MapComponent } from '../../components/map.component/map-component.js';
+import { MapLayerSwitcherComponent } from '../../components/map-layer-switcher.component/map-layer-switcher-component.js';
 import { HeaderComponent } from '../../components/header.component/header-component.js';
 
 new HeaderComponent('#site-header', { homeUrl: './index.html' });
@@ -16,6 +17,7 @@ const map = new MapComponent('#map', {
 		},
 	],
 });
+new MapLayerSwitcherComponent(map);
 
 const startButton = document.querySelector('#polygon-start');
 const finishButton = document.querySelector('#polygon-finish');
