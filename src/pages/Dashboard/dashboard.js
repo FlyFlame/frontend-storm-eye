@@ -3,6 +3,28 @@ import { HeaderComponent } from '../../components/header.component/header-compon
 
 new HeaderComponent('#site-header', { homeUrl: './index.html' });
 
+document.querySelectorAll('[data-text-reveal]').forEach((element) => {
+	const parts = element.textContent.split(/(\s+)/);
+	const fragment = document.createDocumentFragment();
+	let wordIndex = 0;
+
+	parts.forEach((part) => {
+		if (!part) return;
+		if (/^\s+$/.test(part)) {
+			fragment.append(document.createTextNode(part));
+			return;
+		}
+
+		const word = document.createElement('span');
+		word.textContent = part;
+		word.style.setProperty('--word-index', wordIndex);
+		fragment.append(word);
+		wordIndex += 1;
+	});
+
+	element.replaceChildren(fragment);
+});
+
 const slider = document.querySelector('[data-analysis-slider]');
 
 if (slider) {
